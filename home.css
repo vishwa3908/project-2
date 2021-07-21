@@ -1,0 +1,194 @@
+@import url('../CSS/fonts.css');
+html,
+body {
+    margin: 0%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+/*  Styling navigation bar */
+
+.navbar {
+    background: rgba(105, 88, 94, 0.219);
+    padding: 0 2.2rem;
+    height: 0rem;
+    min-height: 10vh;
+    overflow: hidden;
+    transition: height 0.7s ease-in-out;
+}
+
+.navbar .nav-icon a {
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
+.navbar .nav-menu {
+    justify-content: space-between;
+}
+
+.navbar .nav-items {
+    display: flex;
+    margin:0;
+
+}
+
+.navbar .toggle {
+    position: absolute;
+    top: 0%;
+    width: 90%;
+    cursor: pointer;
+    display: none;
+}
+
+.navbar .toggle .toggle-icons {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.6rem 0;
+}
+
+.navbar .toggle .toggle-icons i {
+    font-size: 1.4rem;
+    color: cadetblue;
+}
+
+.collapse {
+    height: 25rem;
+}
+
+.navbar .nav-items .nav-link {
+    padding: 1.2rem 1rem;
+    font-size: 1.2rem;
+    position: relative;
+    font-family: Abel, sans-serif;
+    border-radius: 1rem;
+}
+
+.navbar .nav-items .nav-link:hover {
+    background-color: antiquewhite;
+}
+
+.navbar .nav-items .nav-link:hover a {
+    color: blueviolet;
+}
+
+.nav-icon {
+    padding: 1.2rem 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    font-size: 1.5rem
+}
+/* ----------------------------------*/
+
+main .page-title{
+    background-image: url("../Images/photo-1504711434969-e33886168f5c.jpg");
+    background-size: cover;
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+
+}
+main .page-title .page-background{
+    padding-top: 10rem;
+    text-align: center;
+    color: white;
+}
+main .page-title h1{
+    margin: 3rem;
+    font-family: Abel,sans-serif;
+    font-size:3rem ;
+    color:rgb(35, 3, 37)
+}
+ul li.active {
+    background: transparent;
+}
+/*--------------------------*/
+
+
+/*--------------*/
+
+footer.footer{
+    height : 100%;
+    background:rgb(12, 0, 0);
+    position: relative;
+    
+}
+footer.footer .container{
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    margin: 0 5vw;
+    
+}
+footer.footer .container> div{
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 3rem 0.9rem;
+}
+footer.footer .container .about-us,.message,.follow h2 {
+    color: white;
+}
+footer.footer .container .about-us p{
+    color: red;
+}
+footer.footer .follow div i{
+    color: rgb(241, 20, 9);
+    padding: 0 0.4rem;
+}
+footer.footer .container .follow a{
+    margin-left:0.5em;
+    justify-content: space-around;
+}
+.fa-facebook{
+    color: blue;
+}
+.fa-instagram{
+    color: orange;
+}
+.fa-twitter{
+    color:blue;
+}
+.fa-youtube{
+    color:red;
+}
+
+
+
+/*   View-port les than 750px    */
+
+@media only screen and (max-width: 750px) {
+    .navbar .nav-items,
+    .nav-menu {
+        flex-direction: column;
+    }
+    .navbar .toggle {
+        display: initial;
+    }
+    .navbar{
+        
+        justify-content: center;
+        align-items: center;
+        
+    }
+    footer.footer .container{
+        grid-template-columns: 100%;
+        justify-content: center;
+    }
+}
